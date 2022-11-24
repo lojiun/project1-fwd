@@ -16,7 +16,10 @@ describe('Api testing', () => {
     const response = await request.get('/img?fileName=Inter&width=900');
     expect(response.status).toBe(400);
   });
-
+  it('enter valid number ', async () => {
+    const response = await request.get('/img?fileName=Inter&width=900&height=-2000');
+    expect(response.status).toBe(400);
+  });
   it('fileName parameter is missing', async () => {
     const response = await request.get('/img?width=900&height=2000');
     expect(response.status).toBe(404);
