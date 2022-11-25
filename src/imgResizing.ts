@@ -3,6 +3,13 @@ const route = express.Router();
 import { imageProcessing } from './routes/imgProcessing';
 import { Validator } from './Helpers/imgValidation';
 
+
+/**
+ * @param fileName : string
+ * @param width : number
+ * @param height : number
+ * @returns path of the image if processing was successful, raise an error otherwise.
+ */
 route.get('/', Validator, async (req, res) => {
   try {
     let fileName = req.query.fileName?.toString() || '';

@@ -9,6 +9,9 @@ export const imageProcessing = async function (
   try {
     const _width = W;
     const _height = H;
+    if (!fs.existsSync(`./src/originalImg/${fileName}.jpeg`)) {
+      return false
+    }
     if (!fs.existsSync(`./src/resizedImgs/${fileName}_${W}_${H}.jpeg`)) {
       const file = await fsPromises.readFile(
         `./src/originalImg/${fileName}.jpeg`

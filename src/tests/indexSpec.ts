@@ -1,5 +1,6 @@
 import { app } from '../index';
 import supertest from 'supertest';
+import { imageProcessing } from '../routes/imgProcessing';
 
 const request = supertest(app);
 
@@ -44,3 +45,17 @@ describe('Api testing', () => {
     expect(response.status).toBe(200);
   });
 });
+
+describe(' image sharp methods ', () => {
+  it('should be defined  as processing should succeed', async () => {
+    try {
+      const imageProcessingdefined = await imageProcessing ('Inter',200, 200);
+      expect(imageProcessingdefined).toBeInstanceOf(Buffer);
+    } catch (e) {
+      console.log('test failed');
+    }
+  });
+
+ 
+  });
+
