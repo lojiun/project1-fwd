@@ -11,6 +11,6 @@
 after run the above command you can access the following endpoint
 ** Endpoint for APIs:-
 
-First: /img?fileName=string&width=number&height=number:
+First: /img?fileName=Inter&width=900&height=320
 
 
