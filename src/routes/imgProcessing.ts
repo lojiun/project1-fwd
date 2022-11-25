@@ -23,7 +23,7 @@ export const imageProcessing = async function (
     const resizedImg = fsPromises.readFile(
       `./src/resizedImgs/${fileName}_${W}_${H}.jpeg`
     );
-
+     console.log(resizedImg)
     return resizedImg;
   } catch (error) {
     console.log(error)

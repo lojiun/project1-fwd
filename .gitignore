@@ -1,7 +1,6 @@
 /node_modules
 node_modules/
 /build
-resizedImgs/*
 src/resizedImgs/Inter_90_20.jpeg
 src/resizedImgs/Inter_900_20.jpeg
 src/resizedImgs/Inter_900_200.jpeg
